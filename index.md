@@ -13,7 +13,7 @@
 
 * **核心前端**: JavaScript (ES6+), TypeScript, HTML5, CSS3 (Sass/Less)
 * **框架与生态**: **Vue 3 Composition API** (Pinia/Vite), **React** (Hooks/Redux/Router), Element Plus, Ant Design
-* **可视化/低代码**: **Vue Flow (节点编辑)**, ECharts, Dagre (图布局算法), react-virtualized
+* **可视化/低代码**: **Vue Flow (节点编辑)**, ECharts, react-virtualized
 * **桌面端**: **Electron**, Electron-builder, 跨平台兼容处理
 * **工程化**: Webpack, Vite, Git, Nginx (反向代理配置)
 * **后端了解**: Node.js, Java, MySQL (仅限于基础了解与简单维护)
@@ -30,19 +30,13 @@
 
 *项目描述：一套用于游戏业务风控与策略配置的中后台系统。核心功能包含可视化的行为树(规则链)编辑器、RTP(返奖率)数据监控及全链路日志追踪。*
 
-**技术栈：** Vue 3, TypeScript, Vite, Element Plus, Vue Flow, ECharts, Dagre
+**技术栈：** Vue 3, TypeScript, Vite, Element Plus, Vue Flow, ECharts
 
 **核心贡献：**
 
 * **可视化行为树编辑器 (低代码核心)**：
 * 基于 **Vue Flow** 深度定制开发了策略逻辑编排器，支持节点拖拽生成、连线逻辑校验及局部数据回显。
-* 集成 **Dagre** 算法实现复杂树形结构的自动层级布局 (Auto Layout)，解决了大规模节点（100+节点）展示错乱的问题。
 * 设计了 `Condition` (条件) 与 `Action` (策略) 的差异化交互，实现了**递归协议转换**，高效处理前端 Graph 模型与后端 Tree JSON 数据之间的双向映射。
-
-
-* **全链路日志追踪 (Trace Visualization)**：
-* 开发了策略执行链路的**线性日志追踪视图**，采用自定义节点渲染技术，将“静态配置规则”与“运行时真实数据”进行快照对比（如金额区间命中情况），辅助运营快速定位策略执行问题。
-* 解决了长列表日志渲染的性能问题，利用虚拟滚动与节点复用技术，确保在海量日志下的流畅体验。
 
 
 * **复杂交互组件与报表**：
