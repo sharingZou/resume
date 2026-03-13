@@ -5,6 +5,7 @@
 
 - 📧 **Telegram**：@SharingZzz
 - 📍 **所在地**：中国
+- 👩‍💻 **性别**：女
 
 ## 💡 个人优势 (Highlights)
 
