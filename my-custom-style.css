@@ -1,0 +1,138 @@
+/* ===== 简历专用：规整、清爽、对齐风格 ===== */
+
+/* 基础重置 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 采用系统默认无衬线字体，保持 GitHub 的干净感 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 10.5pt; /* 进一步缩小字体，使内容显得更丰富精致 */
+  line-height: 1.6;
+  color: #24292e;
+  background-color: #ffffff;
+  margin: 1.2cm auto;
+  width: 92%;
+  max-width: 900px;
+}
+
+/* 顶部个人信息区 - 模仿 PDF 的紧凑排列 */
+h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+/* 姓名下方的横向联系方式栏 */
+h1 + p {
+  font-size: 9.5pt;
+  color: #586069;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px; /* 间距代替横线，更现代 */
+}
+
+/* 模块大标题 - 增加灰色背景块，提升区域感 */
+h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.8rem 0;
+  padding: 4px 10px;
+  background-color: #f6f8fa; /* 浅灰底色提升视觉引导 */
+  border-left: 4px solid #24292e; /* 左侧粗线，模仿专业简历 */
+  color: #1b1f23;
+}
+
+/* 公司/项目小标题 - 实现左右对齐布局 */
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between; /* 核心：让名称在左，时间在右 */
+  align-items: baseline;
+  border-bottom: none;
+}
+
+/* 针对时间戳的特殊处理 (假设时间写在括号里或紧随其后) */
+h3 em, h3 span {
+  font-size: 9.5pt;
+  font-weight: normal;
+  color: #6a737d;
+  font-style: normal;
+}
+
+/* 列表缩进优化 - 模仿 PDF 的清晰点阵 */
+ul {
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+  list-style-type: disc;
+}
+
+/* 重点词汇强化 */
+strong {
+  color: #000;
+  background-color: rgba(27,31,35,0.05); /* 淡淡的底色，突出技术栈 */
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* 表格：技术储备专用 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 9.5pt;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #dfe2e5;
+}
+
+th {
+  background-color: #f6f8fa;
+  width: 20%; /* 固定维度列宽度 */
+  font-weight: 600;
+}
+
+/* 链接 */
+a {
+  color: #0366d6;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/* 页面分割线 */
+hr {
+  height: 1px;
+  border: none;
+  background-color: #eaecef;
+  margin: 1.5rem 0;
+}
+
+/* 打印优化：防止标题和内容被切断 */
+@media print {
+  body { margin: 0.8cm; }
+  h2, h3 { page-break-after: avoid; }
+  section, ul { page-break-inside: avoid; }
+  
+  /* 确保链接后显示 URL */
+  a:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+  }
+}
